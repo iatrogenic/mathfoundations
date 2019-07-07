@@ -1,0 +1,26 @@
+\contentsline {section}{Pre-Modernity}{1}{section*.1}
+\contentsline {subsubsection}{The Greeks}{1}{subsubsection*.2}
+\contentsline {subsubsection}{The Axiomatic Method}{1}{subsubsection*.3}
+\contentsline {subsubsection}{An Early Tension}{1}{subsubsection*.4}
+\contentsline {section}{Modernity}{2}{section*.5}
+\contentsline {subsection}{Cantor's Paradise}{2}{subsection*.6}
+\contentsline {subsubsection}{Paradoxes}{2}{subsubsection*.7}
+\contentsline {subsubsection}{Axiom of Choice}{3}{subsubsection*.8}
+\contentsline {subsubsection}{Predicativity}{3}{subsubsection*.9}
+\contentsline {subsection}{Formalization}{3}{subsection*.10}
+\contentsline {subsubsection}{Zermelo-Fraenkel Set Theory (1908)}{3}{subsubsection*.11}
+\contentsline {subsubsection}{\textit {Principia Mathematica}}{4}{subsubsection*.12}
+\contentsline {subsection}{The Major Foundational Schools of Thought}{5}{subsection*.13}
+\contentsline {subsubsection}{Logicism}{5}{subsubsection*.14}
+\contentsline {subsubsection}{Intuitionism}{5}{subsubsection*.15}
+\contentsline {subsubsection}{Formalism}{5}{subsubsection*.16}
+\contentsline {subsection}{Gödel's First and Second Incompleteness Theorems}{6}{subsection*.17}
+\contentsline {subsubsection}{First Incompleteness Theorem}{7}{subsubsection*.18}
+\contentsline {subsubsection}{Second Incompleteness Theorem}{8}{subsubsection*.19}
+\contentsline {section}{After The \textit {Grundlagenkrise}}{8}{section*.20}
+\contentsline {subsection}{Arrows Instead Of Epsilon}{8}{subsection*.21}
+\contentsline {subsubsection}{Category Theory}{8}{subsubsection*.22}
+\contentsline {subsubsection}{Topoi}{9}{subsubsection*.23}
+\contentsline {subsubsection}{Constructive Mathematics}{9}{subsubsection*.24}
+\contentsline {subsubsection}{Type Theory}{9}{subsubsection*.25}
+\contentsline {subsubsection}{Homotopy Type Theory (HoTT) and Univalent Foundations}{10}{subsubsection*.26}

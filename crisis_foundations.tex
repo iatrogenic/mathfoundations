@@ -1,0 +1,280 @@
+\documentclass[12p]{article}
+
+%common number sets
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+
+%packages
+\usepackage{geometry}
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{theoremref}
+\usepackage{mathabx}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+%images dir
+\graphicspath{ {./images/} }
+
+%environments
+\newtheorem{axiom}{Axiom}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}{Remark}
+
+%new commands
+\def\signed#1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
+		\hbox{}\nobreak\hfil\raise-3pt\hbox{(#1)}%
+		\parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+
+%format section titles
+\titleformat{\section}{\centering\Large \bfseries}{}{0em}{\MakeUppercase}[\titlerule]
+\titleformat{\subsection}{\large \centering \bfseries}{1}{0em}{}[]
+\titleformat{\subsubsection}[runin]{\bfseries}{1}{0em}{§ }[]
+%remove numbering
+\setcounter{secnumdepth}{0}
+\begin{document}
+%cover
+\begin{titlepage}
+	\centering
+
+	{\scshape\huge \bf Foundations of Mathematics \par}
+	\vspace{0.5cm}
+	{\huge\bfseries An Historical Outline \par}
+	\vspace{2cm}
+
+	
+	\vfill
+	
+	% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+\newpage
+\tableofcontents
+\newpage
+\setcounter{page}{1}
+\section{Pre-Modernity}
+
+\subsubsection{The Greeks}The ancient Greeks were the first to demonstrate an interest in foundational matters, in the \textit{Posterior Analytics}, Aristotle presents the axiomatic method which was used in Euclid's \textit{Elements},  Euclid's Geometry became the undeniable foundation for all mathematics until Descartes showed that arguably Algebra was of a more foundational nature thereby demoting Geometry from its privileged status.
+
+\subsubsection{The Axiomatic Method}
+The first recorded usage of the axiomatic method is attributed to Aristotle's syllogistic and Euclid's \textit{Elements}. When developing a theory in this way, one begins by selecting a few basic statements called \textit{axioms} (from the greek \textit{axíōma} meaning ``what is thought fitting"), nowadays the word also has a formal meaning, but for now it'll simply mean ``a statement that is deemed evidently true."
+
+These axioms together with some other basic notions constitute our initial theory which is developed through the process of definition and deduction, with the restriction that these two processes only make use of axioms, previously derived statements, and already defined notions.
+
+\subsubsection{An Early Tension}
+Stated in an equivalent matter, Euclid's fifth axiom is the following:
+\begin{quote}
+In two-dimensional geometry a line parallel to a given line $L$ is a line that does not intersect with $L$. Euclid’s fifth axiom states that at most one parallel can be drawn through any point not on L. \cite{robivc2015foundations}
+\end{quote}
+
+This axiom struck Euclid and other ancient mathematicians as comparatively less obvious, infinity was a problematic concept for the ancient Greeks and the fifth axiom implicitly speaks of arbitrarily remote regions of a plane. Failed attempts were made to deduce it from the other axioms, but in 1868 Beltrami proved that Euclid's fifth axiom is independent from the others\cite{robivc2015foundations}.  This is an early example of metamathematics, for Beltrami used mathematical methods to study mathematics itself.
+
+Various efforts to show the necessity of the fifth postulate were made, (e.j., by assuming that there are several different distinct parallels through a given point) these attempts at \textit{reductio ad absurdum} unwittingly led to the discovery of a class of perfectly reasonable systems called non-euclidean geometries. Furthermore it turned out that non-euclidean geometries were useful and possibly even ``more real" than Euclid's (the geometry of Einstein's relativity is non-euclidean).
+
+It is easy to see how such a discovery would have an impact on what mathematicians of the time deemed to be self-evident. Sometimes instinct and experience deceive us.
+
+The hypothesis is that this newfound open-mindedness led mathematicians to shift their focus from metaphysical concerns, such as the nature of a natural number, to the study of properties of axiomatic theories. The meaning of ``axiom" had changed to a mere hypothesis and a theory was evaluated on the success of its interpretations and its relation to reality. 
+\newpage
+\section{Modernity}
+\begin{quote}
+	After deserting for a long time the old Euclidean standards of rigour, mathematics is now returning to them, and even making efforts to go beyond them.
+	\signed{Gottlob Frege}
+\end{quote}
+\subsection{Cantor's Paradise}
+Cantor defines a set as ``a set is any collection of definite, distinguishable objects of our intuition or of our intellect to be conceived as a whole." The axioms of Cantor's theory weren't written down explicitly but analysis of his work shows that he used three principles as if they were axioms:
+
+\begin{enumerate}
+	\item (Extensionality) A set is completely determined by its members.
+	\item (Abstraction) Every property determines a set.
+	\item (Choice) Given any set $F$ of non-empty pairwise disjoint sets, there is a set that contains exactly one member of each set $F$.
+\end{enumerate}
+
+The theory quickly found applications throughout mathematics and gradually it became clear that Cantor's theory offered a simple and unified approach to what was then all of mathematics.
+
+Between 1874 and 1897, Cantor first undertook systematically to compare infinite sets in terms of the possibility of establishing bijections.\cite{kleene-meta} and in his first article, published in \textit{Crelle's Journal}, called \textit{On a Property of the Class of all Real Algebraic Numbers}, he proved that the set of real algebraic numbers is enumerable\cite{earlysettheory}. His second paper, in which he proved $\mathbb{Q}$'s enumerability, was heavily criticized:
+\begin{quote}
+	Cantor faced tremendous opposition in gaining recognition of these works. Kronecker and a number of other prominent mathematicians of that time were firmly aligned against his new and strange notions. \cite{earlysettheory}
+\end{quote}
+
+\subsubsection{Paradoxes}
+The new mathematics developed by Cantor was still in its infancy when the validity of the entire construction was brought into question by the discovery of various set-theoretic paradoxes.
+\begin{tcolorbox}[colback=white, arc=0.1pt]
+	\begin{itemize}
+	\item \textbf{Cantor's Paradox (1899)} \newline
+	 Let $M$ be the set of all sets. By Cantor's theorem $|2^M| > |M|$ and because $2^M$ is a set we have that $2^M \subset M$. Hence $|2^M| < |M|$. Thus proving that $|2^M|  < |M|$ and that \textbf{not} $|2^M|  < |M|$.
+	\item \textbf{Zermelo-Russell Paradox (1902-3)} \newline Consider the set: $$ R := \{a \mid a \notin a\}  $$ If $R\in R$ then by definition $R \notin R$. So we are forced to negate the assumption. But if $R \notin R$ then $R \in R$ again by definition. This paradox was discovered independently by Russell and Zermelo.
+\end{itemize}
+\end{tcolorbox}
+Note that only the very basic notions --- negation and set membership --- are necessary for the Zermelo-Russell paradox. There's evidence that up until this point Hilbert and Zermelo did not fully appreciate the implications of the various paradoxes that were emerging\cite{sep-russell-paradox}, presumably because those relied on constructions of greater complexity.
+
+
+Various other paradoxes were found, --- such as the \textit{Burali-Forti} paradox, which arises out of Cantor's theory of transfinite ordinals --- some of these were discovered by the mathematicians championing modern approaches to the field, they now found themselves in a position of having to defend the cogency of theories they themselves had advocated. The two main solutions proposed to the inconsistency of Cantorian set theory were the Zermelo-Fraenkel axiomatized set theory and Bertrand Russell's Doctrine of Types which will be discussed later. The debate proceeding the discovery of these paradoxes and search for an appropriate foundation is famously known as  ``the foundational crisis of mathematics" (\textit{Grundlagenkrise der Mathematik}).
+\subsubsection{Axiom of Choice}
+José Ferreirós argues that the importance given in historical accounts of this era exaggerate the impact the paradoxes had on the foundational debate. He points out that in the first decade of the twentieth century a controversy of similar importance waged, that of the arguments surrounding the Axiom of Choice (AC) and Zermelo's proof of the well-ordering theorem, which states that every set can be well-ordered. The AC states that given an infinite family of disjoint nonempty sets, there is a set, known as a \textit{choice set}, that contains exactly one element from each set in the family. Usage of the AC does not require an explicit characterization of the choice set, when such a characterization is possible its usage becomes unnecessary.
+\subsubsection{Predicativity}
+The paradoxes of set theory led Poincaré to formulate the notion of \textit{predicativity} (1905-6, 1908). Informally, a definition is \textit{impredicative} when it introduces an element by reference to a totality that already contains that element.  Restricting now our attention to sets, consider a set $M$ and a particular object $m$ defined so that on the one hand $m \in M$, and on the other hand the definition of $m$ depends on $M$, we say that this definition is impredicative. Simply put there appears to be some circularity going on. A concrete example would be Dedekind's definition of the set $\NN$ as the intersection of all sets that contain $1$ and are closed under an injective function $\sigma$ such that $1 \notin \sigma(\NN)$ \cite{ferreirós_2001}\cite{kleene-meta}.
+
+The paradoxes previously discussed all rely on impredicative definitions, which convinced Poincaré that impredicativity was the source of the issue. Russell (1906, 1910) enunciated the same explanation in his vicious circle principle: \textit{No totality can contain members definable only in terms of this totality, or members involving or presupposing this totality}. One could simply banish all definitions of this nature, the problem is that much of Analysis makes use of them. Weyl in his book \textit{Das Kontinuum} undertook to find out how much of analysis could be reconstructed without impredicative definitions. He succeeded in obtaining some parts of analysis but much was lost. For example, he was unable to prove that a set $M \subseteq \RR$ such that $M \neq \emptyset$ that has an upper bound also has a least upper bound\cite{kleene-meta}.
+\subsection{Formalization}
+\subsubsection{Zermelo-Fraenkel Set Theory (1908)}
+The vigorous debate initiated by the publishing of Zermelo's well-ordering theorem led him to work out the foundations of set theory, so as to show that his proof could be derived using an unexceptional axiom system \cite{ferreirós_2001}. The system that emerged out of this work is known as the Zermelo-Fraenkel Axioms (ZF). This system together with some additions due to Fraenkel and Von Neumann, and the innovative proposal by Weyl and Skolem of formulating it within first-order logic, became what is now known as ZFC (Zermelo-Fraenkel with Choice).
+
+In ZF there is only one kind of entity, the set. All sets are built up from certain simple ones and the axioms apply only to sets that have already been constructed. In ZF the comprehension principle can only be used relative to an already constructed set. This is known as the separation principle. Given a set $A$ and a property $\varphi(x)$ there exists a set whose elements are the members of $A$ that satisfy $\varphi(x)$ denoted by $\{ x : x \in A \wedge \varphi(x) \}$.
+
+
+Thus translating Russell's set yields $R(A) = \{ x : x \in A \wedge x \notin x \}$. $R(A) \in R(A)$, if and only if, $R(A) \in A$ and $R(A) \notin R(A)$, on the other hand, $R(A) \notin R(A)$, if and only if, $R(A) \in A$ and $R(A) \in R(A)$. The paradox vanishes and we are simply left with a proof that $R(A) \notin A$.
+\subsubsection{\textit{Principia Mathematica}}
+Frege's book \textit{Grundgesetze der Arithmetik} (The Foundations of Arithmetic) was an attempt at reconstructing arithmetic (and some analysis) on a sound foundation by deducing it from logic together with definitions.
+Frege's system involves a kind of \textit{type hierarchy}. It distinguishes objects from properties, from properties-of-properties, from properties-of-properties-of-properties, etc, and every item is assigned a determinate level in the hierarchy. Then, if a property is in level $l (l > 0)$ it may only be attributed to items of level $l-1$. Note that this resolves something analogous to the Zermelo-Russell paradox, in which it is stipulated the property of \textit{being a property that doesn't apply to itself}. In Frege's hierarchical theory of properties, there is no real contradiction, for any $l$-level property cannot be attributed to another $l$-level property, in particular, it cannot be attributed to itself \cite{smith2013introduction}.
+
+However no such hierarchy was stipulated for classes, ``his disastrous Basic Law V in effect flattens the hierarchy of classes and puts them all on the same level \cite{smith2013introduction}". Russell discovered that this law entailed a contradiction and communicated it to Frege who replied:
+\begin{quote}
+	.... Your discovery of the contradiction has surprised me beyond words and, I should almost like to say, left me thunderstruck, because it has rocked the ground on which I meant to build arithmetic. It seems accordinly that the transformation of the generality of an equality into an equality of value ranges (set 9 of my Grundgesetze) is not always permissible, that my law V (section 20, p. 36) is false, and that my explanations in section 31 do not suffice to secure a Bedeutung for my combinations of signs in all cases. I must give some further thought to the matter. It is all the more serious as the collapse of my law V seems to undermine not only the foundations of my arithmetic but the only possible foundations of arithmetic as such. And yet, I should think, it must be possible to set up conditions for the transformation of the generality of an equality into an equality of value-ranges so as to retain the essentials of my proofs. Your discovery is at any rate a very remarkable one, and it may perhaps lead to a great advance in logic, undesirable as it may seem at first.
+\end{quote}
+So far, this says nothing about classes. One way of resolving class-theoretic paradoxes is by stratifying the universe of classes into a similar type-hierarchy. Such a type-hierarchy would be put to use by Bertrand Russell and Alfred North Whitehead in the monumental \textit{Principia Mathematica}. Their approach was to take over Frege's stratification of properties and link it to the stratification of classes, by treating talk about classes as lightly disguised talk of their corresponding defining properties \cite{smith2013introduction}, thus avoiding Russell's ``vicious circle principle." Whilst Frege wished to simply put arithmetic on solid ground, the \textit{Principia} had a more ambitious goal, that of formalizing all of mathematics.
+
+\subsection{The Major Foundational Schools of Thought}
+\subsubsection{Logicism}
+In preface to the second edition of ``The Principles of Mathematics" Russell summarizes the logicist view:
+\begin{quote}
+	The fundamental thesis of the following pages, that mathematics and logic are identical, is one which I have never seen any reason to modify 
+\end{quote}
+Chapter I of the book begins with a definition of pure mathematics:
+\begin{quote}
+Pure Mathematics is the class of all propositions of the form ``$p$ implies $q$," where $p$ and $q$ are propositions, and neither $p$ nor $q$ contains any constants except logical constants. And logical constants are all notions definable in terms of the following: Implication, the relation of a term to a class of which it is a member, the notions of \textit{such that}, the notion of relation, and such further notions as may be involved in the general notion of propositions of the above form. In addition to these, mathematics \textit{uses} a notion which is not a constituent of the propositions which it considers, namely the notion of truth. 
+\end{quote}
+Simply put, this is the view that mathematics is a branch of logic.
+
+\subsubsection{Intuitionism}
+Kronecker and Poincaré could be viewed as forerunners of the intuitionistic school. Poincaré defended mathematical induction as an irreducible tool of intuitive mathematical reasoning and Kronecker argued that the new fashionable definitions were only words, since they do not enable one to decided on the existence of an object that satisfies the definition\cite{kleene-meta} (foreshadowing the dismissal of ``purely existential" proofs). 
+
+
+However, these anecdotes are only of an ``intuitionistic leaning" (Wikipedia classifies them as ``constructionists" and views intuitionism as a subset of this group). What might be called proto-Intuitionism originates in 1908 when Brouwer publishes a paper entitled ``The untrustworthiness of the principles of logic", in which the validity of the logical principles handed down to us from Aristotle is questioned and the limits of their applicability.
+\begin{quote}
+	I am convinced that the axiom of solvability and the principle of excluded third are both false,
+	and that historically the belief in these dogmas has been caused thusly. First, one has abstracted classical logic from the mathematics of subsets in a certain finite set, then ascribed
+	to this logic an a priori existence independent of mathematics, and finally, on the basis of this alleged apriority, applied it rightlessly to the mathematics of infinite sets. \signed{Brouwer}
+\end{quote}
+From 1913 on, Intuitionism matured with Brouwer's increasing dedication to refining the ideas formulated in his dissertation and reworking of mathematics in accordance to the principles of his philosophy. This view of mathematics has far reaching consequences, importantly, Brouwer rejected the principle of the excluded middle, which he thought equivalent to the conviction that all mathematical problems are solvable \cite{ferreirós_2001}. For the intuitionist $(p \vee \neg p)$ is neither true nor false unless there is a constructive proof of either $p$ or $\neg p$, since proofs by contradiction require this principle, a quintessential and ancient part of mathematical reasoning is discarded by Brouwer.
+\subsubsection{Formalism}
+Also in the introduction to the second edition of ``The Principles of Mathematics" Russell acknowledges the two major oppositions that his project faces:
+\begin{quote}
+	These reasons are, broadly speaking, of two opposite kinds: first, that there are certain unsolved difficulties in mathematical logic, which make it appear less certain than mathematics is believe to be ; and secondly that, if the logical basis of mathematics is accepted, it justified, or tends to justify, much work, such as that of Georg Cantor, which is viewed with suspicion by many mathematicians on the account of the unsolved paradoxes which it shares with logic. These two opposite lines of criticism are represented by the formalists, led by Hilbert, and the intuitionists, led by Brouwer.
+\end{quote}
+As an example, the formalist conception of integers consists in leaving them undefined and asserting concerning them axioms that make possible the deduction of the familiar arithmetical propositions. That is, no meaning is attached to the symbols $0,1,2,\ldots$. Russell attacks this points of view:
+\begin{quote}
+	The formalists have forgotten that numbers are needed, not only for doing sums, but for counting. Such propositions as `There were 12 Apostles' or `London has 6,000,000 inhabitants' cannot be interpreted in their system. For the symbol `0' may be taken to mean any finite integer, thereby making any of Hilbert's axioms false ; and thus every number-symbol becomes infinitely ambiguous. The formalists are like a watchmaker who is so absorbed in making his watches look pretty that he has forgotten their purpose of telling the time, and has therefore omitted to insert any works.
+\end{quote}
+In another criticism, Russell captures the core philosophical outlook of the formalist:
+\begin{quote}
+	For him [Hilbert], `existence,' as usually understood, is an unnecessarily metaphysical concept, which should be replaced by the precise concept of non-contradiction.
+\end{quote}
+Hilbert agreed with Brouwer that concepts such as the completed infinite go beyond intuitive evidence, but unlike Brouwer's destructive reaction which discarded much of modern mathematics, Hilbert proposed a program aimed at formulating  classical mathematics as a consistent formal axiomatic theory \cite{kleene-meta}, known as \textit{Hilbert's Program} which promised to ``to eliminate from the world once and for all the sceptical doubts." This optimism would prove to be unfounded as we will shortly see. 
+
+\subsection{Gödel's First and Second Incompleteness Theorems}
+Before going over the incompleteness theorems it's worthwhile to fix some notation and clarify the meaning of some of the words being used.
+
+
+$T$ here stands for a formal theory, which is roughly speaking, a set of grammatical formulas, a \textit{semantics} (which is a way of ascertaining the truth-value of a given formula) and a deductive system (a way to make \textit{deductions} through the usage of \textit{rules of inference} from \textit{axioms}). Below is some notation and definitions that we'll be making use of:
+\begin{tcolorbox}[colback=white, arc=0.1pt]
+	
+	\begin{itemize}
+		\item The set of all formulas of $T$ will be denoted by $\textsf{Form}(T) $ 
+		\item If there is a deduction of $\varphi \in \textsf{Form}(T)$ from $T$ we write $T \vdash \varphi$ otherwise $T \nvdash \varphi$.
+		\item If a formula $\varphi \in \textsf{Form}(T)$ is \textit{true} (or a \textit{tautology} in the logician's jargon) we write $T \Vdash \varphi$ otherwise $T \nVdash \varphi$.
+	\end{itemize}
+	Let $T$ be formal theory and $\varphi$ a formula of $T$:
+	\begin{itemize}
+		\item A theory $T$ is said to be \textit{sound} if $T \Vdash \varphi$ implies $T \vdash \varphi$.
+		\item A theory $T$ is said to be \textit{consistent} if there exists no $\varphi$ such that $T \vdash \varphi$ and $T \vdash \neg \varphi$.
+		\item A theory $T$ is said to be \textit{complete} if $T \Vdash \varphi$ implies $T \vdash \varphi$
+	\end{itemize}
+\end{tcolorbox}
+The first incompleteness theorem shows that assuming the consistency of the system in \textit{Principia}, then there are truths of arithmetic that cannot be deduced within it. Gödel begins his paper:
+
+\begin{quote}
+	The development of mathematics toward greater precision has led, as is well known, to the formalization of large tracts of it, so that one can prove any theorem using nothing but a few mechanical rules. The most comprehensive formal system that have been set up hitherto are the system of \textit{Principia Mathematica}... on the one hand and the Zermel-Fraenkel axiom system for set theory ... on the other. These two system are so comprehensive that in them all methods of proof today used in mathematics are formalized, that is, reduced to a few axioms and rules of inference. One might therefore conjecture that these axioms and rules of inference are sufficient to decide \textit{any} mathematical question that can at all be formally expressed in these systems. It will be shown below that this is not the case, that on the contrary there are in the two systems mentioned relatively simple problems in the theory of integers which cannot be decided on the basis of the axioms. This situation is not in any way due to the special nature of the systems that have been set up, but holds for a very wide class of formal systems, ...
+\end{quote}
+\subsubsection{First Incompleteness Theorem}
+Suppose we come up with an axiomatic theory $T$ whose purpose is to capture the structure of $\NN$, addition and multiplication on $\NN$ --- other operations could be added to this list and the incompleteness theorems would still hold, hence the frequent usage of the phrase ``sufficiently strong theory" in informal expositions of the meta-theorems.
+
+
+We want $T$ to be a sound theory, but Gödel's proof presents us with a procedure that yields a formula $G_T \in \textsf{Form}(F)$ (commonly called a Gödel-sentence), such that --- assuming that $T$ really is sound --- we can show that $T \nvdash G_T$, and yet the formula $G_T$ is such that it must be true.
+
+
+At the heart of Gödel's proof is the realization that information is more than the particular strings of symbols used to convey it, the key insight being that statements about a theory like $T$ can be encoded within itself, through the arithmetization of syntax, i.e. systematically associating expressions of the $T$'s language with numerical codes. Furthermore he found a general method of constructing an arithmetical sentence $G_T$ that encodes the statement ``The sentence $G_T$ itself is unprovable in theory $T$"  for any theory $T$ strong enough to capture basic arithmetic. 
+
+
+Importantly, the proof of the first incompleteness theorem only uses elementary features of ZFC and PM, features that also also shared by the formal system Peano Arithmetic \footnote{A formalization of arithmetic due to Giuseppe Peano}. To summarize Gödel's first result, arithmetical truth isn't the same as provability in some axiomatizable system \cite{smith2013introduction}.
+\subsubsection{Second Incompleteness Theorem}
+The proof of the first theorem showed that we can construct an arithmetical sentence $\textsf{Con}_T$ that asserts $T$'s own consistency, Gödel proves that $T \vdash (\textsf{Con}_T \rightarrow G_T)$. However, the first incompleteness theorem tells us that if $T$ is consistent then $T \nvdash G_T$, so it follows that if $T$ is consistent then it cannot prove its own consistency.
+
+
+A rough interpretation may be presented ``theories with the capacity to express a modest amount of basic arithmetic cannot prove their own consistency\cite{smith2013introduction}."
+\section{After The \textit{Grundlagenkrise}}
+
+\begin{quote}
+	... interest in effective methods, algorithms, and computational mathematics has grown markedly in recent decades—and all of these are closer to the constructivist tradition \cite{ferreirós_2001}
+\end{quote}
+Furthermore proofs have been growing in complexity making it harder for humans to verify their correctness. Vladimir Voevodsky argues that sooner or later we will need the aid of computers to be absolutely certain that a proof is correct.
+
+
+\subsection{Arrows Instead Of Epsilon}
+\begin{quote}
+	In the years between 1920 and 1940 there occurred, as you know, a complete reformation of the classification of different branches of mathematics, necessitated by a new conception of  the essence of mathematical thinking itself, which originated from the works of Cantor and Hilbert. From the later there sprang the \textit{systematic axiomatization} of mathematical science in entirety and the fundamental concept of \textit{mathematical structure}. What you may perhaps be unaware of is that mathematics is about to go through a second revolution at this very moment. This is the one which is in a way completing the work of the first revolution, namely, which is releasing mathematics from the far too narrow conditions by 'set'; it is the theory of \textit{categories and functors}, for which estimation of its range or perception of its consequences is still too early... \signed{Jean Dieudonné}
+\end{quote}
+\subsubsection{Category Theory}
+The subject arose in the early 1940s from the work of Samuel Eilenberg and Saunders Maclane in algebraic topology, though it quickly outgrew its initial applications into an abstract theory of its own.
+
+\begin{quote}
+A category may be thought of in the first instance as a universe for a particular kind of mathematical discourse. Such a universe is determined by specifying a certain kind of "object", and a certain kind of "arrow" that links different objects. Thus the study of topology takes place in a universe of discourse (category) with topological spaces as the objects and continuous functions as the arrows. Linear algebra is set in the category whose arrows are linear transformations between vector spaces (the objects); group theory in the category whose arrows are group homomorphisms; differential topology where the arrows are smooth maps of manifolds, and so on \cite{goldblatt2014topoi}. 
+\end{quote}
+\subsubsection{Topoi}
+The category known as \textsf{Set}, whose objects are the sets \footnote{As we've seen, there is no such thing as the set of all sets in ZFC, thus category theory requires a stronger ontology than ZFC can provide. The first foundation of category theory, due to Mac Lane and Elenberg, used NBG.} and whose morphisms are the set-functions is the universe of mathematical discourse in which most mathematics is done.
+\begin{quote}
+	... the category axioms are "weak", in the sense that they hold in contexts that differ wildly from the initial examples cited above. In such contexts the interpretations of set-theoretic notions can behave quite differently to their counterparts in \textsf{Set}. So the question arises as to when this situation is avoided, i.e. when does a category look and behave like \textsf{Set}? A vague answer is --- when it is (at least) a \textit{topos}. This then gives our first indication of what a topos is. It is a category whose structure is sufficiently like Set that in it the interpretations of basic set-theoretical constructions behave much as they do in \textsf{Set} itself \cite{goldblatt2014topoi}. 
+\end{quote}
+
+The first attempt at using category theory as an alternative foundation for mathematics was by William Lawvere in 1964. The aim was to produce set-theory out of category theory but failed as it made use of set theory from the outset \cite{goldblatt2014topoi}. However, the research undertook in 1969 by Lawvere and Myles Tierney led to the abstract axiomatic concept of an \textit{elementary topos}, formulated entirely independently of set theory. Because the notion of topos encompasses \textsf{Set}, the result is an entirely new foundation for mathematics, based on category theory.
+\subsubsection{Constructive Mathematics}
+Constructive logic differs from classical logic in that the notion of truth is replaced by the notion of proof, hence classical logic is said to be truth-functional and constructive logic to be proof-functional. The crucial distinction is how the existential quantifier is approached. In constructive logic $\exists x. P(x)$ can only be deduced if we produce an $a$ such that $P(a)$. Similarly, $(\forall x \in S). P(x)$ can only be deduced if there is an algorithm that takes an element $a \in S$ and proves $P(a)$. The other conditions for proof are of the same spirit, a proof of $p \wedge q$ may be seen as a pair of proofs $(p, q)$ \cite{thompson1991type}.
+Constructivism's proof-theoretic semantics ensures that all proofs have computational content and with the emergence of computer science its growing appeal is understandable.
+\subsubsection{Type Theory}
+As we've seen, Bertrand Russell devised his ``Doctrine of Types" as a way of blocking the paradoxes of set theory, but the modern systems have roots in Alonzo Church's work. One generalization of Church's type theory --- due to swedish logician and philosopher Per Martin-Löf --- currently stands out, that is \textit{Martin-Löf type theory}, intended initially as a rigorous foundation for constructive mathematics \cite{awodey2013voevodsky}.
+
+
+ Type theories analogous to this also form the basis of modern computer proof assistants which are used for formalizing mathematics, such as \textit{Coq}, which was used in a formal verification of the four-color theorem \cite{gonthier2008formal}. 
+
+
+The connections to category theory also make type theory especially appealing:
+\begin{quote}
+	Type theory and certain kinds of category theory are closely related. By a syntax-semantics duality one may view type theory as a formal syntactic language or calculus for category theory, and conversely one may think of category theory as providing semantics for type theory.\cite{nlab:relation_between_type_theory_and_category_theory}
+\end{quote}
+
+\subsubsection{Homotopy Type Theory (HoTT) and Univalent Foundations}
+``Homotopy type theory interprets type theory from a homotopical perspective," thus connecting three distinct branches of mathematics: homotopy theory, higher category theory and type theory.
+
+\begin{quote}
+In homotopy type theory, one regards the types as spaces, or homotopy types, and the logical constructions (such as the product $A \times B$)  as  homotopy-invariant  constructions  on spaces.  In  this  way,  one  is  able  to  manipulate spaces directly, without first having to develop point-set topology or even define the real numbers \cite{awodey2013voevodsky}.
+\end{quote}
+Martin-Löf type theory was meant to be used as foundational framework, unsurprisingly then this new branch of mathematics presents a novel perspective on such matters:
+\begin{quote}
+	This suggests a new conception of foundations of mathematics, with intrinsic homotopical
+	content,  an  ``invariant”  conception  of  the  objects  of  mathematics ---  and  convenient  machine
+	implementations, which can serve as a practical aid to the working mathematician.  This is the
+	\textit{Univalent Foundations} program \cite{hottbook}.
+\end{quote}
+\newpage
+\bibliographystyle{plain}
+\bibliography{refs}
+\end{document}
